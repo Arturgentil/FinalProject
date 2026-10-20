@@ -321,3 +321,4 @@ recurso que os layouts antigos já usavam.
    Engine (usa MPU6050 — ainda não existe no firmware de exemplo) ou Safety
    Engine (SOS). Os dois publicam na categoria SAFETY/EMERGENCY, que já
    ignora cooldown por decisão de projeto.
+# FinalProjectbyArtur
