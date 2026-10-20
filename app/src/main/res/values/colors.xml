@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--
+        StepVolt V3 — paleta "Instrumento".
+        A base é um índigo muito escuro (não preto puro) com superfícies em
+        camadas, para que os painéis pareçam vidro sobreposto e não caixas
+        chapadas. Cada grandeza tem uma cor própria e fixa no app inteiro:
+        coração = coral, oxigênio = ciano, passos = âmbar, energia = volt.
+        O verde da marca fica reservado para energia e ação primária.
+    -->
+
+    <!-- Base / superfícies -->
+    <color name="bg">#07070F</color>
+    <color name="ink_deep">#04040A</color>
+    <color name="inset">#0D0D1A</color>
+    <color name="surface">#12121F</color>
+    <color name="surface_light">#1B1B2E</color>
+    <color name="surface_raised">#22223A</color>
+    <color name="border">#262640</color>
+    <color name="line_strong">#33335A</color>
+
+    <!-- V6 "Aurora": tokens dos componentes. O tema claro redefine todos em values-notnight. -->
+    <color name="screen_top">#0E1233</color>
+    <color name="screen_mid">#08091A</color>
+    <color name="screen_bottom">#05050C</color>
+    <color name="screen_glow_a">#2400F5A0</color>
+    <color name="screen_glow_b">#1E7B5CFF</color>
+    <color name="card_top">#1C1F3E</color>
+    <color name="card_bottom">#12142C</color>
+    <color name="card_raised_top">#272B52</color>
+    <color name="card_raised_bottom">#191C38</color>
+    <color name="glass_border">#26FFFFFF</color>
+    <color name="glass_fill">#12FFFFFF</color>
+    <color name="input_fill">#0D0F26</color>
+    <color name="nav_fill">#0B0C1F</color>
+    <color name="brand_a">#00F5A0</color>
+    <color name="brand_b">#19D3FF</color>
+    <color name="brand_on">#04140F</color>
+    <color name="chip_on_fill">#2200F5A0</color>
+    <color name="chip_on_stroke">#7000F5A0</color>
+
+    <!-- Marca -->
+    <color name="green">#00F5A0</color>
+    <color name="green_dark">#00C88A</color>
+    <color name="volt">#00F5A0</color>
+    <color name="volt_dim">#0C7A57</color>
+    <color name="volt_wash">#1A00F5A0</color>
+
+    <!-- Grandezas -->
+    <color name="pulse">#FF5C7A</color>
+    <color name="pulse_wash">#22FF5C7A</color>
+    <color name="oxy">#4CC9F0</color>
+    <color name="oxy_wash">#224CC9F0</color>
+    <color name="stride">#FFB347</color>
+    <color name="stride_wash">#22FFB347</color>
+
+    <!-- Legado (mantido para as telas já existentes) -->
+    <color name="teal">#4CC9F0</color>
+    <color name="purple">#8B5CFF</color>
+    <color name="orange">#FFB347</color>
+    <color name="pink">#FF3D71</color>
+    <color name="red">#FF5C7A</color>
+    <color name="yellow">#FFD166</color>
+
+    <!-- Estados -->
+    <color name="state_ok">#00F5A0</color>
+    <color name="state_warn">#FFD166</color>
+    <color name="state_danger">#FF3D71</color>
+    <color name="state_idle">#5C5C7A</color>
+
+    <!-- Texto -->
+    <color name="text_primary">#F2F2F7</color>
+    <color name="text_secondary">#9A9AB8</color>
+    <color name="text_muted">#74748F</color>
+    <color name="text_faint">#5C5C7A</color>
+    <color name="text_hint">#3A3A5A</color>
+    <color name="black_text">#000000</color>
+
+    <!-- Diversos -->
+    <color name="overlay">#B3000000</color>
+    <color name="scrim">#CC04040A</color>
+    <color name="chart_grid">#1E1E33</color>
+    <color name="nav_inactive">#5C5C7A</color>
+    <color name="transparent">#00000000</color>
+</resources>

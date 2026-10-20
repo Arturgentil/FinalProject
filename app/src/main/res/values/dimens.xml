@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Escala de espaçamento em múltiplos de 4dp -->
+    <dimen name="sp_1">4dp</dimen>
+    <dimen name="sp_2">8dp</dimen>
+    <dimen name="sp_3">12dp</dimen>
+    <dimen name="sp_4">16dp</dimen>
+    <dimen name="sp_5">20dp</dimen>
+    <dimen name="sp_6">24dp</dimen>
+    <dimen name="sp_8">32dp</dimen>
+    <dimen name="sp_10">40dp</dimen>
+
+    <dimen name="screen_gutter">20dp</dimen>
+    <dimen name="status_inset">52dp</dimen>
+    <dimen name="nav_height">64dp</dimen>
+    <dimen name="panel_radius">20dp</dimen>
+    <dimen name="panel_radius_small">14dp</dimen>
+
+    <!-- Espaço reservado embaixo para a barra de abas não cobrir conteúdo -->
+    <dimen name="nav_clearance">88dp</dimen>
+</resources>

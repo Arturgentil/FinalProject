@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/bg_card"
+    android:layout_marginBottom="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="vertical" android:padding="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="horizontal" android:gravity="center_vertical"
+            android:layout_marginBottom="14dp">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/imgAvatar"
+                android:layout_width="44dp" android:layout_height="44dp"
+                app:shapeAppearanceOverlay="@style/RoundedCircle"
+                android:scaleType="centerCrop"
+                android:background="@drawable/bg_avatar_placeholder" />
+
+            <LinearLayout
+                android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                android:orientation="vertical" android:layout_marginStart="10dp">
+                <TextView android:id="@+id/txtName"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:textColor="@color/text_primary" android:textSize="14sp" android:textStyle="bold" />
+                <TextView android:id="@+id/txtHandle"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:textColor="@color/text_faint" android:textSize="12sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content" android:layout_height="wrap_content" android:orientation="vertical" android:gravity="end">
+                <View android:id="@+id/shoeSwatch"
+                    android:layout_width="40dp" android:layout_height="26dp"
+                    android:background="@drawable/bg_icon_button" />
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="T\u00eanis" android:textColor="@color/text_faint" android:textSize="10sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="horizontal" android:layout_marginBottom="14dp">
+            <LinearLayout
+                android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                android:orientation="vertical" android:gravity="center" android:background="@drawable/bg_icon_button"
+                android:padding="10dp" android:layout_marginEnd="4dp">
+                <TextView android:id="@+id/txtSteps"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:textColor="@color/text_primary" android:textSize="16sp" android:textStyle="bold" />
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="passos" android:textColor="@color/yellow" android:textSize="11sp" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                android:orientation="vertical" android:gravity="center" android:background="@drawable/bg_icon_button"
+                android:padding="10dp" android:layout_marginHorizontal="4dp">
+                <TextView android:id="@+id/txtEnergy"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:textColor="@color/text_primary" android:textSize="16sp" android:textStyle="bold" />
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="mWh" android:textColor="@color/green" android:textSize="11sp" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                android:orientation="vertical" android:gravity="center" android:background="@drawable/bg_icon_button"
+                android:padding="10dp" android:layout_marginStart="4dp">
+                <TextView android:id="@+id/txtDuration"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:textColor="@color/text_primary" android:textSize="16sp" android:textStyle="bold" />
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="min" android:textColor="@color/purple" android:textSize="11sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="horizontal" android:paddingTop="8dp">
+            <LinearLayout android:id="@+id/btnLike"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:orientation="horizontal" android:gravity="center_vertical" android:layout_marginEnd="24dp"
+                android:padding="4dp">
+                <TextView android:id="@+id/iconLike"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="\u2661" android:textSize="20sp" />
+                <TextView android:id="@+id/txtLikes"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp" android:textColor="@color/text_faint" android:textSize="14sp" android:textStyle="bold" />
+            </LinearLayout>
+            <LinearLayout android:id="@+id/btnToggleComments"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:orientation="horizontal" android:gravity="center_vertical" android:padding="4dp">
+                <TextView
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="\uD83D\uDCAC" android:textSize="17sp" />
+                <TextView android:id="@+id/txtCommentsCount"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp" android:textColor="@color/text_faint" android:textSize="14sp" android:textStyle="bold" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout android:id="@+id/containerComments"
+        android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="vertical" android:paddingHorizontal="16dp" android:paddingBottom="6dp"
+        android:visibility="gone" />
+
+    <LinearLayout android:id="@+id/containerCommentInput"
+        android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="horizontal" android:gravity="center_vertical"
+        android:paddingHorizontal="16dp" android:paddingBottom="14dp" android:paddingTop="4dp"
+        android:visibility="gone">
+        <EditText android:id="@+id/inputComment"
+            android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+            android:background="@android:color/transparent" android:hint="Adicionar coment\u00e1rio..."
+            android:textColorHint="@color/text_hint" android:textColor="@color/text_primary" android:textSize="14sp" />
+        <ImageButton android:id="@+id/btnSendComment"
+            android:layout_width="36dp" android:layout_height="36dp"
+            android:background="@android:color/transparent" android:src="@android:drawable/ic_menu_send"
+            app:tint="@color/green" />
+        <ImageButton android:id="@+id/btnCloseComment"
+            android:layout_width="36dp" android:layout_height="36dp"
+            android:background="@android:color/transparent" android:src="@android:drawable/ic_menu_close_clear_cancel"
+            app:tint="@color/text_faint" />
+    </LinearLayout>
+
+</LinearLayout>

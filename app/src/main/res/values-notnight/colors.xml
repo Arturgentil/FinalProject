@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--
+        Paleta clara (usada quando o tema do app é "Claro" ou quando o tema é
+        "Seguir o sistema" e o celular está no modo claro). O padrão do app
+        continua sendo o escuro, em values/colors.xml.
+        As cores das grandezas e da marca (verde, coral, ciano, âmbar) são as
+        mesmas nos dois temas, para cada medida manter a sua identidade.
+    -->
+    <color name="bg">#F4F5FA</color>
+    <color name="ink_deep">#E8EAF2</color>
+    <color name="inset">#ECEEF5</color>
+    <color name="surface">#FFFFFF</color>
+    <color name="surface_light">#F0F1F8</color>
+    <color name="surface_raised">#E7E9F3</color>
+    <color name="border">#D6D9E6</color>
+    <color name="line_strong">#BFC4D8</color>
+
+    <color name="text_primary">#14141F</color>
+    <color name="text_secondary">#52536C</color>
+    <color name="text_muted">#686983</color>
+    <color name="text_faint">#8A8BA3</color>
+    <color name="text_hint">#A9ABC0</color>
+
+    <color name="screen_top">#F6F7FC</color>
+    <color name="screen_mid">#F1F3FA</color>
+    <color name="screen_bottom">#EBEEF7</color>
+    <color name="screen_glow_a">#1C00C88A</color>
+    <color name="screen_glow_b">#147B5CFF</color>
+    <color name="card_top">#FFFFFF</color>
+    <color name="card_bottom">#F6F7FC</color>
+    <color name="card_raised_top">#FFFFFF</color>
+    <color name="card_raised_bottom">#EEF0F8</color>
+    <color name="glass_border">#1F14183C</color>
+    <color name="glass_fill">#0D14183C</color>
+    <color name="input_fill">#FFFFFF</color>
+    <color name="nav_fill">#FFFFFF</color>
+    <color name="chip_on_fill">#2600C88A</color>
+    <color name="chip_on_stroke">#9900A672</color>
+
+    <color name="overlay">#66000000</color>
+    <color name="scrim">#CCF4F5FA</color>
+</resources>

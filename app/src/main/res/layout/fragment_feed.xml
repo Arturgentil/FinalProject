@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/bg_screen">
+
+    <LinearLayout
+        android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="horizontal" android:gravity="center_vertical"
+        android:paddingHorizontal="20dp" android:paddingTop="52dp" android:paddingBottom="16dp">
+
+        <ImageButton android:id="@+id/btnBack" style="@style/GhostIconButton"
+            android:layout_width="36dp" android:layout_height="36dp"
+            android:src="@drawable/ic_back" app:tint="@color/text_primary"
+            android:contentDescription="Voltar" android:layout_marginEnd="8dp" />
+
+        <TextView
+            android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+            android:text="Comunidade" android:textColor="@color/text_primary" android:textSize="20sp" android:textStyle="bold" />
+
+        <ImageButton android:id="@+id/btnSearch" style="@style/GhostIconButton"
+            android:layout_width="36dp" android:layout_height="36dp"
+            android:src="@drawable/ic_search" app:tint="@color/text_secondary"
+            android:contentDescription="Buscar pessoas" android:layout_marginEnd="8dp" />
+
+        <FrameLayout android:layout_width="44dp" android:layout_height="40dp" android:layout_marginEnd="6dp">
+            <ImageButton android:id="@+id/btnNotifications" style="@style/GhostIconButton"
+                android:layout_width="36dp" android:layout_height="36dp"
+                android:layout_gravity="center_vertical|start"
+                android:src="@drawable/ic_bell" app:tint="@color/text_secondary"
+                android:contentDescription="Notificações" />
+            <TextView android:id="@+id/txtNotifBadge"
+                android:layout_width="wrap_content" android:layout_height="16dp"
+                android:minWidth="16dp" android:layout_gravity="top|end"
+                android:gravity="center" android:paddingHorizontal="4dp"
+                android:background="@drawable/bg_badge_alert"
+                android:textColor="@color/black_text" android:textSize="10sp" android:textStyle="bold"
+                android:visibility="gone" />
+        </FrameLayout>
+
+        <LinearLayout android:id="@+id/btnSort"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:orientation="horizontal" android:gravity="center_vertical"
+            android:background="@drawable/bg_pill_selected" android:paddingHorizontal="12dp" android:paddingVertical="8dp">
+            <TextView android:id="@+id/txtSortLabel"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Recentes" android:textColor="@color/green" android:textSize="12sp" android:textStyle="bold" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView android:id="@+id/txtFeedState"
+        android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:gravity="center" android:padding="32dp"
+        android:textColor="@color/text_muted" android:textSize="14sp"
+        android:visibility="gone" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerFeed"
+        android:layout_width="match_parent" android:layout_height="0dp"
+        android:layout_weight="1"
+        android:paddingHorizontal="20dp"
+        android:clipToPadding="false"
+        android:paddingBottom="20dp" />
+</LinearLayout>

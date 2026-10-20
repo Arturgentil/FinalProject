@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/bg_screen">
+
+    <LinearLayout
+        android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="horizontal" android:gravity="center_vertical"
+        android:paddingHorizontal="20dp" android:paddingTop="52dp" android:paddingBottom="16dp">
+        <ImageButton android:id="@+id/btnBack" style="@style/GhostIconButton"
+            android:layout_width="40dp" android:layout_height="40dp"
+            android:src="@drawable/ic_back" app:tint="@color/text_primary" />
+        <TextView
+            android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+            android:layout_marginStart="12dp" android:text="Notifica\u00e7\u00f5es"
+            android:textColor="@color/text_primary" android:textSize="20sp" android:textStyle="bold" />
+        <TextView android:id="@+id/btnMarkAllRead"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:background="@drawable/bg_card_accent_green" android:paddingHorizontal="12dp" android:paddingVertical="8dp"
+            android:text="Marcar lidas" android:textColor="@color/green" android:textSize="12sp" android:textStyle="bold" />
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerNotifications"
+        android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1"
+        android:paddingHorizontal="20dp" android:clipToPadding="false" android:paddingBottom="20dp" />
+
+    <LinearLayout android:id="@+id/emptyState"
+        android:layout_width="match_parent" android:layout_height="match_parent"
+        android:orientation="vertical" android:gravity="center" android:visibility="gone">
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="\uD83D\uDD15" android:textSize="40sp" />
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:layout_marginTop="12dp" android:text="Tudo limpo!" android:textColor="@color/text_primary"
+            android:textSize="18sp" android:textStyle="bold" />
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:layout_marginTop="4dp" android:text="Nenhuma notifica\u00e7\u00e3o por aqui"
+            android:textColor="@color/text_muted" android:textSize="14sp" />
+    </LinearLayout>
+</LinearLayout>

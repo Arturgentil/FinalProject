@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_screen">
+
+    <LinearLayout
+        android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="horizontal" android:gravity="center_vertical"
+            android:paddingHorizontal="20dp" android:paddingTop="52dp" android:paddingBottom="16dp">
+            <ImageButton android:id="@+id/btnBack" style="@style/GhostIconButton"
+                android:layout_width="40dp" android:layout_height="40dp"
+                android:src="@drawable/ic_back" app:tint="@color/text_primary" />
+            <LinearLayout
+                android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                android:orientation="vertical" android:layout_marginStart="12dp">
+                <TextView
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="Detalhes da atividade" android:textColor="@color/text_primary" android:textSize="17sp" android:textStyle="bold" />
+                <TextView android:id="@+id/txtDate"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:textColor="@color/text_faint" android:textSize="12sp" />
+            </LinearLayout>
+            <TextView android:id="@+id/btnShare"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:background="@drawable/bg_card_accent_green" android:paddingHorizontal="14dp" android:paddingVertical="8dp"
+                android:textColor="@color/green" android:textSize="13sp" android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="vertical" android:paddingHorizontal="20dp">
+
+            <LinearLayout
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="vertical" android:background="@drawable/bg_card_accent_green" android:padding="18dp">
+                <LinearLayout
+                    android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical">
+                    <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:orientation="vertical">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="In\u00edcio" android:textColor="@color/text_secondary" android:textSize="12sp" />
+                        <TextView android:id="@+id/txtStart" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:textColor="@color/text_primary" android:textSize="24sp" android:textStyle="bold" />
+                    </LinearLayout>
+                    <View android:layout_width="0dp" android:layout_height="1dp" android:layout_weight="1" android:background="#4D00F5A0" android:layout_marginHorizontal="10dp" />
+                    <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:orientation="vertical" android:gravity="end">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Fim" android:textColor="@color/text_secondary" android:textSize="12sp" />
+                        <TextView android:id="@+id/txtEnd" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:textColor="@color/text_primary" android:textSize="24sp" android:textStyle="bold" />
+                    </LinearLayout>
+                </LinearLayout>
+                <TextView android:id="@+id/txtDuration"
+                    android:layout_width="match_parent" android:layout_height="wrap_content" android:gravity="center"
+                    android:layout_marginTop="10dp" android:textColor="@color/green" android:textSize="14sp" android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="horizontal" android:layout_marginTop="14dp">
+                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                    android:orientation="vertical" android:background="@drawable/bg_card" android:padding="14dp" android:layout_marginEnd="5dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="\uD83D\uDC5F" android:textSize="16sp" />
+                    <TextView android:id="@+id/txtSteps" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:textColor="@color/text_primary" android:textSize="20sp" android:textStyle="bold" android:layout_marginTop="4dp" />
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Passos" android:textColor="@color/text_muted" android:textSize="11sp" />
+                </LinearLayout>
+                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                    android:orientation="vertical" android:background="@drawable/bg_card" android:padding="14dp" android:layout_marginStart="5dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="\u26A1" android:textSize="16sp" />
+                    <TextView android:id="@+id/txtEnergy" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:textColor="@color/text_primary" android:textSize="20sp" android:textStyle="bold" android:layout_marginTop="4dp" />
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Energia" android:textColor="@color/text_muted" android:textSize="11sp" />
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="horizontal" android:layout_marginTop="10dp">
+                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                    android:orientation="vertical" android:background="@drawable/bg_card" android:padding="14dp" android:layout_marginEnd="5dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="\uD83D\uDEE3\uFE0F" android:textSize="16sp" />
+                    <TextView android:id="@+id/txtDistance" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:textColor="@color/text_primary" android:textSize="20sp" android:textStyle="bold" android:layout_marginTop="4dp" />
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Dist\u00e2ncia" android:textColor="@color/text_muted" android:textSize="11sp" />
+                </LinearLayout>
+                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                    android:orientation="vertical" android:background="@drawable/bg_card" android:padding="14dp" android:layout_marginStart="5dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="\u2764\uFE0F" android:textSize="16sp" />
+                    <TextView android:id="@+id/txtBpmAvg" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:textColor="@color/text_primary" android:textSize="20sp" android:textStyle="bold" android:layout_marginTop="4dp" />
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="BPM m\u00e9dio" android:textColor="@color/text_muted" android:textSize="11sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="vertical" android:background="@drawable/bg_card" android:padding="16dp" android:layout_marginTop="14dp">
+                <TextView
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="\u2764\uFE0F Batimentos card\u00edacos" android:textColor="@color/text_primary" android:textSize="15sp" android:textStyle="bold"
+                    android:layout_marginBottom="10dp" />
+                <com.stepvolt.app.ui.views.LineChartView android:id="@+id/chartBpm"
+                    android:layout_width="match_parent" android:layout_height="120dp" />
+                <TextView android:id="@+id/txtBpmNoData"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:textColor="@color/text_faint" android:textSize="12sp" android:visibility="gone"
+                    android:text="Sem amostras de batimentos registradas nesta atividade." />
+                <LinearLayout android:id="@+id/bpmStatsRow"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="horizontal" android:layout_marginTop="8dp">
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical" android:gravity="center">
+                        <TextView android:id="@+id/txtBpmMin" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textColor="@color/text_primary" android:textSize="14sp" android:textStyle="bold" />
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="M\u00ednimo" android:textColor="@color/text_faint" android:textSize="11sp" />
+                    </LinearLayout>
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical" android:gravity="center">
+                        <TextView android:id="@+id/txtBpmAvgSmall" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textColor="@color/text_primary" android:textSize="14sp" android:textStyle="bold" />
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="M\u00e9dio" android:textColor="@color/text_faint" android:textSize="11sp" />
+                    </LinearLayout>
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:orientation="vertical" android:gravity="center">
+                        <TextView android:id="@+id/txtBpmMax" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textColor="@color/text_primary" android:textSize="14sp" android:textStyle="bold" />
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="M\u00e1ximo" android:textColor="@color/text_faint" android:textSize="11sp" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="vertical" android:background="@drawable/bg_card" android:padding="16dp" android:layout_marginTop="14dp">
+                <TextView
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="\uD83D\uDCA7 Oxigena\u00e7\u00e3o sangu\u00ednea" android:textColor="@color/text_primary" android:textSize="15sp" android:textStyle="bold"
+                    android:layout_marginBottom="10dp" />
+                <com.stepvolt.app.ui.views.LineChartView android:id="@+id/chartSpo2"
+                    android:layout_width="match_parent" android:layout_height="90dp" />
+                <TextView android:id="@+id/txtSpo2NoData"
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:textColor="@color/text_faint" android:textSize="12sp" android:visibility="gone"
+                    android:text="Sem amostras de SpO\u2082 registradas nesta atividade." />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="vertical" android:background="@drawable/bg_card" android:padding="16dp" android:layout_marginTop="14dp" android:layout_marginBottom="24dp">
+                <TextView
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="\uD83D\uDCCD Trajeto" android:textColor="@color/text_primary" android:textSize="15sp" android:textStyle="bold" />
+                <TextView
+                    android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Este t\u00eanis n\u00e3o tem GPS, ent\u00e3o o app n\u00e3o registra o trajeto percorrido - apenas passos, energia e batimentos vindos do ESP32."
+                    android:textColor="@color/text_muted" android:textSize="13sp" android:lineSpacingMultiplier="1.3" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

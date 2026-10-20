@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">StepVolt</string>
+
+    <!-- Abas -->
+    <string name="tab_home">Início</string>
+    <string name="tab_health">Saúde</string>
+    <string name="tab_device">Tênis</string>
+    <string name="tab_ai">Análise</string>
+    <string name="tab_you">Você</string>
+
+    <!-- Conexão -->
+    <string name="conn_disconnected">Tênis desconectado</string>
+    <string name="conn_scanning">Procurando o tênis…</string>
+    <string name="conn_connecting">Conectando…</string>
+    <string name="conn_preparing">Preparando os sensores…</string>
+    <string name="conn_connected">Conectado</string>
+    <string name="conn_reconnecting">Reconectando…</string>
+    <string name="conn_connect">Conectar</string>
+    <string name="conn_disconnect">Desconectar</string>
+
+    <!-- Estados vazios -->
+    <string name="empty_no_device">Conecte o tênis para ver seus dados ao vivo.</string>
+    <string name="empty_no_history">Nenhuma sessão registrada ainda. Conecte o tênis e toque em Iniciar sessão.</string>
+    <string name="empty_no_alerts">Nenhum aviso até agora. Os limites ficam em Ajustes.</string>
+
+    <!-- IA -->
+    <string name="ai_disclaimer">A análise interpreta os números que o tênis mediu. Ela não é diagnóstico e não substitui um profissional de saúde.</string>
+
+    <!-- Notificações -->
+    <string name="chan_session_name">Sessão em andamento</string>
+    <string name="chan_session_desc">Mantém a leitura do tênis ativa enquanto uma sessão está gravando.</string>
+    <string name="chan_alerts_name">Avisos de saúde</string>
+    <string name="chan_alerts_desc">Avisa quando uma medida passa dos limites que você definiu.</string>
+    <string name="widget_description">Passos e energia de hoje, direto na tela inicial.</string>
+</resources>

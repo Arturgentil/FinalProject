@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:gravity="top"
+    android:background="@drawable/bg_card"
+    android:padding="14dp"
+    android:layout_marginBottom="8dp">
+
+    <FrameLayout android:layout_width="44dp" android:layout_height="44dp">
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/imgAvatar"
+            android:layout_width="44dp" android:layout_height="44dp"
+            app:shapeAppearanceOverlay="@style/RoundedCircle"
+            android:scaleType="centerCrop"
+            android:visibility="gone" />
+        <FrameLayout android:id="@+id/iconContainer"
+            android:layout_width="44dp" android:layout_height="44dp"
+            android:background="@drawable/bg_icon_button">
+            <TextView android:id="@+id/txtIcon"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:layout_gravity="center" android:textSize="18sp" />
+        </FrameLayout>
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+        android:orientation="vertical" android:layout_marginStart="12dp">
+        <TextView android:id="@+id/txtMessage"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:textSize="14sp" android:lineSpacingMultiplier="1.2" />
+        <TextView android:id="@+id/txtTime"
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:layout_marginTop="4dp" android:textColor="@color/text_faint" android:textSize="12sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:orientation="horizontal" android:gravity="center_vertical">
+        <View android:id="@+id/dotUnread"
+            android:layout_width="10dp" android:layout_height="10dp"
+            android:background="@drawable/circle_dot_green" android:layout_marginEnd="8dp" />
+        <ImageButton android:id="@+id/btnRemove"
+            android:layout_width="28dp" android:layout_height="28dp"
+            android:background="@android:color/transparent"
+            android:src="@drawable/ic_close" app:tint="@color/text_muted" />
+    </LinearLayout>
+</LinearLayout>

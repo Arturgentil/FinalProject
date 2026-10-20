@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_screen"
+    android:clipToPadding="false"
+    android:paddingBottom="24dp">
+
+    <LinearLayout
+        android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="horizontal" android:gravity="center_vertical"
+            android:paddingHorizontal="20dp" android:paddingTop="52dp" android:paddingBottom="16dp">
+            <TextView
+                android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                android:text="Perfil" android:textColor="@color/text_primary" android:textSize="20sp" android:textStyle="bold" />
+            <ImageButton android:id="@+id/btnSettings" style="@style/GhostIconButton"
+                android:layout_width="40dp" android:layout_height="40dp" android:layout_marginEnd="8dp"
+                android:src="@drawable/ic_settings" app:tint="@color/text_secondary" />
+            <ImageButton android:id="@+id/btnLogout" style="@style/GhostIconButton"
+                android:layout_width="40dp" android:layout_height="40dp"
+                android:background="@drawable/bg_button_danger"
+                android:src="@drawable/ic_logout" app:tint="@color/red" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="vertical" android:paddingHorizontal="20dp">
+
+            <!-- Profile card -->
+            <LinearLayout
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="vertical" android:background="@drawable/bg_card" android:padding="18dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <FrameLayout
+                        android:id="@+id/avatarHolder"
+                        android:layout_width="82dp" android:layout_height="82dp"
+                        android:clickable="true" android:focusable="true"
+                        android:contentDescription="Alterar foto de perfil">
+                        <com.google.android.material.imageview.ShapeableImageView
+                            android:id="@+id/imgAvatar"
+                            android:layout_width="76dp" android:layout_height="76dp"
+                            android:layout_gravity="top|start"
+                            app:shapeAppearanceOverlay="@style/RoundedCircle"
+                            app:strokeColor="@color/border" app:strokeWidth="1dp"
+                            android:scaleType="centerCrop" android:background="@drawable/bg_avatar_placeholder" />
+                        <ImageView
+                            android:layout_width="28dp" android:layout_height="28dp"
+                            android:layout_gravity="bottom|end"
+                            android:background="@drawable/bg_badge_primary"
+                            android:padding="6dp"
+                            android:src="@drawable/ic_camera"
+                            app:tint="@color/black_text"
+                            android:importantForAccessibility="no" />
+                    </FrameLayout>
+                    <LinearLayout
+                        android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                        android:orientation="vertical" android:layout_marginStart="14dp">
+                        <TextView android:id="@+id/txtName"
+                            android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:textColor="@color/text_primary" android:textSize="19sp" android:textStyle="bold" />
+                        <TextView android:id="@+id/txtUsername"
+                            android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:textColor="@color/green" android:textSize="13sp" />
+                        <TextView android:id="@+id/txtBio"
+                            android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp" android:textColor="@color/text_secondary" android:textSize="13sp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="horizontal" android:layout_marginTop="16dp" android:paddingTop="16dp">
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                        android:orientation="vertical" android:gravity="center">
+                        <TextView android:id="@+id/txtFollowing"
+                            android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:textColor="@color/text_primary" android:textSize="18sp" android:textStyle="bold" />
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="Seguindo" android:textColor="@color/text_muted" android:textSize="12sp" />
+                    </LinearLayout>
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                        android:orientation="vertical" android:gravity="center">
+                        <TextView android:id="@+id/txtFollowers"
+                            android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:textColor="@color/text_primary" android:textSize="18sp" android:textStyle="bold" />
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="Seguidores" android:textColor="@color/text_muted" android:textSize="12sp" />
+                    </LinearLayout>
+                    <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                        android:orientation="vertical" android:gravity="center">
+                        <TextView android:id="@+id/txtActiveDays"
+                            android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:textColor="@color/text_primary" android:textSize="18sp" android:textStyle="bold" />
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="Dias ativos" android:textColor="@color/text_muted" android:textSize="12sp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:orientation="horizontal" android:layout_marginTop="14dp">
+                    <Button android:id="@+id/btnEditProfile"
+                        android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                        android:background="@drawable/bg_card_accent_green" android:textColor="@color/green"
+                        android:textSize="14sp" android:textStyle="bold" android:text="Editar perfil"
+                        android:stateListAnimator="@null" android:layout_marginEnd="6dp" />
+                    <Button android:id="@+id/btnCustomizeShoe"
+                        android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                        android:background="@drawable/bg_card" android:textColor="@color/purple"
+                        android:textSize="14sp" android:textStyle="bold" android:text="\uD83D\uDC5F Personalizar"
+                        android:stateListAnimator="@null" android:layout_marginStart="6dp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Stats grid -->
+            <LinearLayout
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="horizontal" android:layout_marginTop="14dp">
+                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                    android:orientation="vertical" android:background="@drawable/bg_card" android:padding="14dp" android:layout_marginEnd="5dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="\uD83D\uDC5F" android:textSize="16sp"/>
+                    <TextView android:id="@+id/txtTotalSteps"
+                        android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:textColor="@color/text_primary" android:textSize="17sp" android:textStyle="bold" android:layout_marginTop="4dp"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="Total de passos" android:textColor="@color/text_muted" android:textSize="11sp" />
+                </LinearLayout>
+                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                    android:orientation="vertical" android:background="@drawable/bg_card" android:padding="14dp" android:layout_marginStart="5dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="\u26A1" android:textSize="16sp"/>
+                    <TextView android:id="@+id/txtTotalEnergy"
+                        android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:textColor="@color/text_primary" android:textSize="17sp" android:textStyle="bold" android:layout_marginTop="4dp"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="Energia gerada" android:textColor="@color/text_muted" android:textSize="11sp" />
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="horizontal" android:layout_marginTop="10dp">
+                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                    android:orientation="vertical" android:background="@drawable/bg_card" android:padding="14dp" android:layout_marginEnd="5dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="\uD83C\uDFC6" android:textSize="16sp"/>
+                    <TextView android:id="@+id/txtRecordSteps"
+                        android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:textColor="@color/text_primary" android:textSize="17sp" android:textStyle="bold" android:layout_marginTop="4dp"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="Recorde de passos" android:textColor="@color/text_muted" android:textSize="11sp" />
+                </LinearLayout>
+                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                    android:orientation="vertical" android:background="@drawable/bg_card" android:padding="14dp" android:layout_marginStart="5dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="\uD83C\uDF1F" android:textSize="16sp"/>
+                    <TextView android:id="@+id/txtRecordEnergy"
+                        android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:textColor="@color/text_primary" android:textSize="17sp" android:textStyle="bold" android:layout_marginTop="4dp"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="Recorde energia" android:textColor="@color/text_muted" android:textSize="11sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Shoe preview -->
+            <LinearLayout android:id="@+id/cardShoePreview"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="horizontal" android:gravity="center_vertical"
+                android:background="@drawable/bg_card" android:padding="16dp" android:layout_marginTop="14dp">
+                <com.stepvolt.app.ui.views.ShoeView
+                    android:id="@+id/shoePreview"
+                    android:layout_width="88dp" android:layout_height="58dp" />
+                <LinearLayout
+                    android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                    android:orientation="vertical" android:layout_marginStart="12dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="Meu StepVolt" android:textColor="@color/text_primary" android:textSize="14sp" android:textStyle="bold" />
+                    <TextView android:id="@+id/txtShoeTheme"
+                        android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:textColor="@color/text_muted" android:textSize="12sp" />
+                </LinearLayout>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:text="\u203A" android:textColor="@color/text_faint" android:textSize="22sp" />
+            </LinearLayout>
+
+            <!-- Tabs -->
+            <LinearLayout android:id="@+id/tabsContainer"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="horizontal" android:background="@drawable/bg_icon_button"
+                android:padding="4dp" android:layout_marginTop="16dp" />
+
+            <LinearLayout android:id="@+id/tabContent"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="vertical" android:layout_marginTop="14dp" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>
